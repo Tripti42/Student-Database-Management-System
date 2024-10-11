@@ -118,9 +118,13 @@ def connect_to_db():
 **How the System Works**
 
 **Add Data in Database**
+
 **Update the Data**
+
 **Delete data from Database**
+
 **Reset Database**
+
 **Search the details of the Student**
 
 
