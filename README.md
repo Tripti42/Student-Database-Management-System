@@ -58,62 +58,6 @@ Install required Python libraries using:
     pip install mysql-connector-python tkinter
 
     
-**Database Setup**
-
-**Create a new database in MySQL:
-**
-
-   CREATE DATABASE student_management;
-    USE student_management;
-    
-   ** Create necessary tables:**
-
-
-CREATE TABLE Students (
-
-    student_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255),
-    address VARCHAR(255),
-    phone_number VARCHAR(15),
-    email VARCHAR(255),
-    course VARCHAR(100),
-    semester INT,
-    attendance_percentage DECIMAL(5, 2)
-);
-
-CREATE TABLE Attendance (
-
-    attendance_id INT PRIMARY KEY AUTO_INCREMENT,
-    student_id INT,
-    date DATE,
-    status VARCHAR(10),
-    FOREIGN KEY (student_id) REFERENCES Students(student_id)
-);
-
-CREATE TABLE Results (
-
-    result_id INT PRIMARY KEY AUTO_INCREMENT,
-    student_id INT,
-    subject VARCHAR(100),
-    marks INT,
-    FOREIGN KEY (student_id) REFERENCES Students(student_id)
-);
-
-
-
-**Connecting the database**
-
-def connect_to_db():
-
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",  # Your MySQL username
-        password="mysql123",  # Your MySQL password
-        database="student_management"
-    )
-
-
-
 
 **How the System Works**
 
