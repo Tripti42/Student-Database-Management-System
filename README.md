@@ -1,12 +1,10 @@
 # Student-Database-Management-System
 
-This project “Student Information Management System” provides us a simple interface for maintainance of student information.It can be used by educational institutes or 
-colleges to maintain the records of students easily.Throughout the project the focus has been on presenting information in an easy and intelligible manner
-Student Management System deals with all kind of student details, academic related reports, college details, course details, curriculum, batch details and other resource related details too. It tracks all the details of a student from the day one to the end of his course which can be used for all reporting purpose, tracking of 
-attendance, progress in the course, completed semesters years, coming semester year curriculum details, exam details, project or any other assignment details, final exam
-, result etc.
+This project is a Student Information Management System designed to help educational institutes and colleges maintain student records easily. The system provides a user-friendly interface for managing all kinds of student details, academic reports, and related information.
 
-![smg2](https://user-images.githubusercontent.com/100334542/178456821-6ebcc431-2569-41af-9f80-dd4869aafbd0.gif)
+
+![image](https://github.com/user-attachments/assets/0091f800-ca92-4d50-b655-b436402d53f1)
+
 
 
 Purpose of project is to maintain details of the students such as storing information about
@@ -39,73 +37,106 @@ Purpose of project is to maintain details of the students such as storing inform
 
 14.Teacher
 
-## Requirements
 
-**Tkinter**
+##**Technologies Used**
 
-![image](https://user-images.githubusercontent.com/100334542/178457537-ccaa5bf6-dc7d-4a49-a24a-ee1ca360d27d.png)
+Python: The programming language for the project
 
-Tkinter is the standard GUI(Graphical User Interface) library for Python. Python when combined with Tkinter provides a fast and easy way to create GUI applications. Tkinter provides a powerful object-oriented interface to the Tk GUI toolkit.
+MySQL: The database for storing student information and records.
 
-**MySQL**
-
-![image](https://user-images.githubusercontent.com/100334542/178457860-2552f5f2-23ee-44a4-8f95-208ad9566759.png)
-
-In this project python is worked in front-end programming language and MySQL is helped as back-end database .
-
-In order to create a database connectivity between Python and MySQL,we first need to install MySQL connector.It is is used to connect Python with MySql so that we can store or retrieve data from Python as front-end and MySql as back-end.
+Tkinter: For creating a simple graphical user interface (GUI).
 
 
-## Interface
 
 
-![Screenshot (1154)](https://user-images.githubusercontent.com/100334542/179423165-e63bfdfb-2459-4448-bbdf-b9deefd6654f.png)
+**Prerequisites**
 
-# **Add Data in Database**
+Python 3.x installed on your machine.
+MySQL database server running.
+
+Install required Python libraries using:
+    pip install mysql-connector-python tkinter
+
+    
+**Database Setup**
+
+**Create a new database in MySQL:
+**
+
+   CREATE DATABASE student_management;
+    USE student_management;
+    
+   ** Create necessary tables:**
 
 
-https://user-images.githubusercontent.com/100334542/180047350-2af7004b-8be8-4844-915c-6b8e1ea7ce60.mp4
+CREATE TABLE Students (
 
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    address VARCHAR(255),
+    phone_number VARCHAR(15),
+    email VARCHAR(255),
+    course VARCHAR(100),
+    semester INT,
+    attendance_percentage DECIMAL(5, 2)
+);
+
+CREATE TABLE Attendance (
+
+    attendance_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT,
+    date DATE,
+    status VARCHAR(10),
+    FOREIGN KEY (student_id) REFERENCES Students(student_id)
+);
+
+CREATE TABLE Results (
+
+    result_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT,
+    subject VARCHAR(100),
+    marks INT,
+    FOREIGN KEY (student_id) REFERENCES Students(student_id)
+);
+
+
+
+**Connecting the database**
+
+def connect_to_db():
+
+    return mysql.connector.connect(
+        host="localhost",
+        user="root",  # Your MySQL username
+        password="mysql123",  # Your MySQL password
+        database="student_management"
+    )
+
+
+
+
+**How the System Works**
+
+#**Add Data in Database**
 # **Update the Data**
-
-
-
-https://user-images.githubusercontent.com/100334542/180052370-d43d2244-cdc5-411f-a2d9-bae1757b2175.mp4
-
 # **Delete data from Database**
-
-
-
-https://user-images.githubusercontent.com/100334542/180054459-72defdf0-4058-4667-a6cd-893c1ec76724.mp4
-
 # **Reset Database**
-
-
-
-
-https://user-images.githubusercontent.com/100334542/180055622-343306c5-ae32-4a94-affd-26588df05b22.mp4
-
 # **Search the details of the Student**
 
 
 
 
 
-https://user-images.githubusercontent.com/100334542/180298904-0d53a371-61f3-41d4-8cde-9adf5d530fdc.mp4
-
-# **MySQL Workbench as Backend Database**
 
 
 
 
 
-https://user-images.githubusercontent.com/100334542/180366333-7184d462-547b-4f1e-a3ab-f7496f5d92ed.mp4
-
-# **Image Browsing**
 
 
 
 
 
-https://user-images.githubusercontent.com/100334542/181087255-7413ed3e-9dcd-4274-b818-7c070d503492.mp4
+
+
 
