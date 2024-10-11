@@ -38,7 +38,7 @@ Purpose of project is to maintain details of the students such as storing inform
 14.Teacher
 
 
-##**Technologies Used**
+## **Technologies Used**
 
 Python: The programming language for the project
 
@@ -49,7 +49,7 @@ Tkinter: For creating a simple graphical user interface (GUI).
 
 
 
-**Prerequisites**
+## **Prerequisites**
 
 Python 3.x installed on your machine.
 MySQL database server running.
@@ -59,7 +59,7 @@ Install required Python libraries using:
 
     
 
-**How the System Works**
+## **How the System Works**
 
 **Add Data in Database**
 
