@@ -44,18 +44,8 @@ Purpose of project is to maintain details of the students such as storing inform
 ## Requirements
 
 **Tkinter**
-
-![image](https://user-images.githubusercontent.com/100334542/178457537-ccaa5bf6-dc7d-4a49-a24a-ee1ca360d27d.png)
-
-Tkinter is the standard GUI(Graphical User Interface) library for Python. Python when combined with Tkinter provides a fast and easy way to create GUI applications. Tkinter provides a powerful object-oriented interface to the Tk GUI toolkit.
-
 **MySQL**
 
-![image](https://user-images.githubusercontent.com/100334542/178457860-2552f5f2-23ee-44a4-8f95-208ad9566759.png)
-
-In this project python is worked in front-end programming language and MySQL is helped as back-end database .
-
-In order to create a database connectivity between Python and MySQL,we first need to install MySQL connector.It is is used to connect Python with MySql so that we can store or retrieve data from Python as front-end and MySql as back-end.
 
 
 ## Interface
