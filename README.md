@@ -44,6 +44,7 @@ Purpose of project is to maintain details of the students such as storing inform
 ## Requirements
 
 **Tkinter**
+
 **MySQL**
 
 
